@@ -50,8 +50,6 @@ export default async function CountryPage({ params }: CountryPageProps) {
     notFound();
   }
 
-  console.log('SSK', {slug, country});
-
   return (
     <PageContainer>
       <div className="min-h-full bg-zinc-50 text-zinc-950 dark:bg-black dark:text-zinc-50">
@@ -59,7 +57,6 @@ export default async function CountryPage({ params }: CountryPageProps) {
         <UpcomingMatches
           matches={country.matchesCollection?.items}
           countryName={country.name}
-          countryFlagUrl={country.flag?.url}
         />
       </div>
     </PageContainer>
