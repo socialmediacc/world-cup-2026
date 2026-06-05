@@ -1,6 +1,8 @@
 export { ASSET_FIELDS } from "@/contentful/graphql/fragments/asset";
+export { COUNTRY_CULTURAL_HIGHLIGHTS_FIELDS } from "@/contentful/graphql/fragments/country-cultural-highlights";
 export { COUNTRY_HERO_FIELDS } from "@/contentful/graphql/fragments/country-hero";
 export { COUNTRY_PROFILE_FIELDS } from "@/contentful/graphql/fragments/country-profile";
+export { FAST_FACT_ITEM_FIELDS } from "@/contentful/graphql/fragments/fast-fact-item";
 export { MATCH_FIELDS } from "@/contentful/graphql/fragments/match";
 export { ENTRY_SYS_FIELDS } from "@/contentful/graphql/fragments/entry-sys";
 export { PAGE_FIELDS } from "@/contentful/graphql/fragments/page";

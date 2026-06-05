@@ -27,6 +27,18 @@ import {
   down as down007,
   up as up007,
 } from "@/contentful/migrations/definitions/007-match-teams-as-strings";
+import {
+  down as down008,
+  up as up008,
+} from "@/contentful/migrations/definitions/008-create-fast-fact-item-content-type";
+import {
+  down as down009,
+  up as up009,
+} from "@/contentful/migrations/definitions/009-create-country-cultural-highlights-content-type";
+import {
+  down as down010,
+  up as up010,
+} from "@/contentful/migrations/definitions/010-add-facts-and-highlights-to-country-profile";
 
 /**
  * Ordered list of Contentful migrations. Add new files under
@@ -81,5 +93,26 @@ export const contentfulMigrations: ContentfulMigration[] = [
       "Change Match home/away teams from Country Profile links to text",
     up: up007,
     down: down007,
+  },
+  {
+    id: "008-create-fast-fact-item-content-type",
+    description:
+      "Create Fast Fact Item content type (label, value, Material icon)",
+    up: up008,
+    down: down008,
+  },
+  {
+    id: "009-create-country-cultural-highlights-content-type",
+    description:
+      "Create Country Cultural Highlights content type (description, tags)",
+    up: up009,
+    down: down009,
+  },
+  {
+    id: "010-add-facts-and-highlights-to-country-profile",
+    description:
+      "Add Fast Facts array and Cultural Highlights link to Country Profile",
+    up: up010,
+    down: down010,
   },
 ];
