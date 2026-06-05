@@ -29,7 +29,10 @@ function createContentfulLink(options: ContentfulApolloOptions = {}) {
       Authorization: `Bearer ${accessToken}`,
     },
     fetchOptions: {
-      next: { revalidate: preview ? 0 : 60 },
+      next: {
+        revalidate:
+          preview || process.env.NODE_ENV === "development" ? 0 : 60,
+      },
     },
   });
 }
