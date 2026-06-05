@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CountryHero } from "@/components/country/country-hero";
+import { CountryInsights } from "@/components/country/country-insights";
 import { UpcomingMatches } from "@/components/country/upcoming-matches";
 import {
   buildPageMetadata,
@@ -52,8 +53,12 @@ export default async function CountryPage({ params }: CountryPageProps) {
 
   return (
     <PageContainer>
-      <div className="min-h-full bg-zinc-50 text-zinc-950 dark:bg-black dark:text-zinc-50">
+      <div className="min-h-full bg-background text-on-background">
         <CountryHero hero={country.hero} />
+        <CountryInsights
+          fastFacts={country.fastFactsCollection?.items}
+          culturalHighlights={country.culturalHighlights}
+        />
         <UpcomingMatches
           matches={country.matchesCollection?.items}
           countryName={country.name}

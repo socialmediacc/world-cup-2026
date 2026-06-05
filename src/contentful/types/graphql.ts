@@ -34,6 +34,29 @@ export type CountryHeroEntry = {
   backgroundImage?: ContentfulAsset | null;
 };
 
+export type FastFactItemEntry = {
+  sys: {
+    id: string;
+    publishedAt?: string | null;
+    firstPublishedAt?: string | null;
+  };
+  internalName?: string | null;
+  label?: string | null;
+  value?: string | null;
+  icon?: string | null;
+};
+
+export type CountryCulturalHighlightsEntry = {
+  sys: {
+    id: string;
+    publishedAt?: string | null;
+    firstPublishedAt?: string | null;
+  };
+  internalName?: string | null;
+  description?: string | null;
+  tags?: Array<string | null> | null;
+};
+
 export type MatchEntry = {
   sys: {
     id: string;
@@ -58,6 +81,10 @@ export type CountryProfileEntry = {
   slug?: string | null;
   flag?: ContentfulAsset | null;
   hero?: CountryHeroEntry | null;
+  fastFactsCollection?: {
+    items?: Array<FastFactItemEntry | null> | null;
+  } | null;
+  culturalHighlights?: CountryCulturalHighlightsEntry | null;
   matchesCollection?: {
     items?: Array<MatchEntry | null> | null;
   } | null;
