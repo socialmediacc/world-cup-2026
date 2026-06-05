@@ -14,3 +14,11 @@ export {
   PAGES_QUERY,
   type PagesQueryVariables,
 } from "@/contentful/graphql/queries/pages";
+export {
+  POST_BY_SLUG_QUERY,
+  type PostBySlugQueryVariables,
+} from "@/contentful/graphql/queries/post-by-slug";
+export {
+  POST_SLUGS_QUERY,
+  type PostSlugsQueryVariables,
+} from "@/contentful/graphql/queries/post-slugs";

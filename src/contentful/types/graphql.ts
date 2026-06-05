@@ -2,6 +2,11 @@
 
 export type ContentfulRichText = {
   json: unknown;
+  links?: {
+    assets?: {
+      block?: Array<ContentfulAsset | null> | null;
+    } | null;
+  } | null;
 };
 
 export type ContentfulAsset = {
@@ -103,6 +108,21 @@ export type PageEntry = {
   seo?: PageSeoEntry | null;
 };
 
+export type PostEntry = {
+  sys: {
+    id: string;
+    publishedAt?: string | null;
+    firstPublishedAt?: string | null;
+  };
+  title?: string | null;
+  slug?: string | null;
+  categories?: Array<string | null> | null;
+  author?: string | null;
+  featuredImage?: ContentfulAsset | null;
+  content?: ContentfulRichText | null;
+  seo?: PageSeoEntry | null;
+};
+
 export type PageBySlugQuery = {
   pageCollection?: {
     items?: Array<PageEntry | null> | null;
@@ -112,6 +132,18 @@ export type PageBySlugQuery = {
 export type PagesQuery = {
   pageCollection?: {
     items?: Array<PageEntry | null> | null;
+  } | null;
+};
+
+export type PostBySlugQuery = {
+  postCollection?: {
+    items?: Array<PostEntry | null> | null;
+  } | null;
+};
+
+export type PostSlugsQuery = {
+  postCollection?: {
+    items?: Array<{ slug?: string | null } | null> | null;
   } | null;
 };
 

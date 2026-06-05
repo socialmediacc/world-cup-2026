@@ -39,6 +39,10 @@ import {
   down as down010,
   up as up010,
 } from "@/contentful/migrations/definitions/010-add-facts-and-highlights-to-country-profile";
+import {
+  down as down011,
+  up as up011,
+} from "@/contentful/migrations/definitions/011-create-post-content-type";
 
 /**
  * Ordered list of Contentful migrations. Add new files under
@@ -114,5 +118,12 @@ export const contentfulMigrations: ContentfulMigration[] = [
       "Add Fast Facts array and Cultural Highlights link to Country Profile",
     up: up010,
     down: down010,
+  },
+  {
+    id: "011-create-post-content-type",
+    description:
+      "Create Post content type (title, slug, categories, author, featured image, content, SEO)",
+    up: up011,
+    down: down011,
   },
 ];

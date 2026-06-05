@@ -22,4 +22,9 @@ export {
   fetchCountryBySlug,
 } from "@/contentful/services/country";
 export { fetchPageBySlug, fetchPages } from "@/contentful/services/page";
+export {
+  fetchPostBySlug,
+  fetchPostSlugs,
+  type Post,
+} from "@/contentful/services/post";
 export { buildPageMetadata } from "@/contentful/utils/build-page-metadata";
