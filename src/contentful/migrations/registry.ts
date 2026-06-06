@@ -43,6 +43,14 @@ import {
   down as down011,
   up as up011,
 } from "@/contentful/migrations/definitions/011-create-post-content-type";
+import {
+  down as down012,
+  up as up012,
+} from "@/contentful/migrations/definitions/012-create-home-hero-content-type";
+import {
+  down as down013,
+  up as up013,
+} from "@/contentful/migrations/definitions/013-create-home-page-content-type";
 
 /**
  * Ordered list of Contentful migrations. Add new files under
@@ -125,5 +133,18 @@ export const contentfulMigrations: ContentfulMigration[] = [
       "Create Post content type (title, slug, categories, author, featured image, content, SEO)",
     up: up011,
     down: down011,
+  },
+  {
+    id: "012-create-home-hero-content-type",
+    description:
+      "Create Home Hero content type (title, description, hero image)",
+    up: up012,
+    down: down012,
+  },
+  {
+    id: "013-create-home-page-content-type",
+    description: "Create Home Page content type (slug, hero, SEO)",
+    up: up013,
+    down: down013,
   },
 ];

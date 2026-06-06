@@ -3,6 +3,8 @@ export { COUNTRY_CULTURAL_HIGHLIGHTS_FIELDS } from "@/contentful/graphql/fragmen
 export { COUNTRY_HERO_FIELDS } from "@/contentful/graphql/fragments/country-hero";
 export { COUNTRY_PROFILE_FIELDS } from "@/contentful/graphql/fragments/country-profile";
 export { FAST_FACT_ITEM_FIELDS } from "@/contentful/graphql/fragments/fast-fact-item";
+export { HOME_HERO_FIELDS } from "@/contentful/graphql/fragments/home-hero";
+export { HOME_PAGE_FIELDS } from "@/contentful/graphql/fragments/home-page";
 export { MATCH_FIELDS } from "@/contentful/graphql/fragments/match";
 export { ENTRY_SYS_FIELDS } from "@/contentful/graphql/fragments/entry-sys";
 export { PAGE_FIELDS } from "@/contentful/graphql/fragments/page";

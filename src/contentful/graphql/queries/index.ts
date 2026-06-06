@@ -7,6 +7,10 @@ export {
   type CountryBySlugQueryVariables,
 } from "@/contentful/graphql/queries/country-by-slug";
 export {
+  HOME_BY_SLUG_QUERY,
+  type HomeBySlugQueryVariables,
+} from "@/contentful/graphql/queries/home-by-slug";
+export {
   PAGE_BY_SLUG_QUERY,
   type PageBySlugQueryVariables,
 } from "@/contentful/graphql/queries/page-by-slug";
