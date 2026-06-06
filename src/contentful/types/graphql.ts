@@ -39,6 +39,23 @@ export type CountryHeroEntry = {
   backgroundImage?: ContentfulAsset | null;
 };
 
+export type HomeHeroEntry = {
+  title?: string | null;
+  description?: string | null;
+  heroImage?: ContentfulAsset | null;
+};
+
+export type HomePageEntry = {
+  sys: {
+    id: string;
+    publishedAt?: string | null;
+    firstPublishedAt?: string | null;
+  };
+  slug?: string | null;
+  hero?: HomeHeroEntry | null;
+  seo?: PageSeoEntry | null;
+};
+
 export type FastFactItemEntry = {
   sys: {
     id: string;
@@ -156,5 +173,11 @@ export type CountryBySlugQuery = {
 export type CountriesQuery = {
   countryProfileCollection?: {
     items?: Array<CountryProfileEntry | null> | null;
+  } | null;
+};
+
+export type HomeBySlugQuery = {
+  homePageCollection?: {
+    items?: Array<HomePageEntry | null> | null;
   } | null;
 };
