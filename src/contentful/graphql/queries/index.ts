@@ -26,3 +26,11 @@ export {
   POST_SLUGS_QUERY,
   type PostSlugsQueryVariables,
 } from "@/contentful/graphql/queries/post-slugs";
+export {
+  POSTS_QUERY,
+  type PostsQueryVariables,
+} from "@/contentful/graphql/queries/posts";
+export {
+  POSTS_COUNT_QUERY,
+  type PostsCountQueryVariables,
+} from "@/contentful/graphql/queries/posts-count";

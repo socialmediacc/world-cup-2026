@@ -164,6 +164,33 @@ export type PostSlugsQuery = {
   } | null;
 };
 
+export type PostListEntry = {
+  sys?: {
+    id: string;
+    publishedAt?: string | null;
+    firstPublishedAt?: string | null;
+  } | null;
+  title?: string | null;
+  slug?: string | null;
+  categories?: Array<string | null> | null;
+  author?: string | null;
+  featuredImage?: ContentfulAsset | null;
+  content?: ContentfulRichText | null;
+};
+
+export type PostsQuery = {
+  postCollection?: {
+    total?: number | null;
+    items?: Array<PostListEntry | null> | null;
+  } | null;
+};
+
+export type PostsCountQuery = {
+  postCollection?: {
+    total?: number | null;
+  } | null;
+};
+
 export type CountryBySlugQuery = {
   countryProfileCollection?: {
     items?: Array<CountryProfileEntry | null> | null;

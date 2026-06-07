@@ -29,8 +29,12 @@ export {
 export { fetchPageBySlug, fetchPages } from "@/contentful/services/page";
 export {
   fetchPostBySlug,
+  fetchPosts,
   fetchPostSlugs,
+  getPostsCount,
+  POSTS_PAGE_SIZE,
   type Post,
+  type PostSummary,
 } from "@/contentful/services/post";
 export { buildPageMetadata } from "@/contentful/utils/build-page-metadata";
 export { HOME_PAGE_SLUG } from "@/contentful/constants/home";
