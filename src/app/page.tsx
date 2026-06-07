@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 
 import { CommunityHub, HOMEPAGE_POSTS_LIMIT } from "@/components/home/community-hub";
 import { HomeHero } from "@/components/home/home-hero";
+import { ParticipatingNations } from "@/components/home/participating-nations";
 import { PageContainer } from "@/components/page-container";
 import { HOME_PAGE_SLUG } from "@/contentful/constants/home";
 import {
   buildPageMetadata,
   fetchHomePageBySlug,
   fetchPosts,
+  getHomepageCountries,
 } from "@/contentful";
 
 export const dynamic = "force-dynamic";
@@ -27,9 +29,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [home, { items: posts }] = await Promise.all([
+  const [home, { items: posts }, countries] = await Promise.all([
     fetchHomePageBySlug({ slug: HOME_PAGE_SLUG }),
     fetchPosts({ page: 1, limit: HOMEPAGE_POSTS_LIMIT }),
+    getHomepageCountries(),
   ]);
 
   if (!home?.hero) {
@@ -41,6 +44,7 @@ export default async function HomePage() {
       <main className="w-full px-margin-mobile py-stack-lg md:px-margin-desktop">
         <HomeHero hero={home.hero} />
         <CommunityHub posts={posts} />
+        <ParticipatingNations countries={countries} />
       </main>
     </PageContainer>
   );

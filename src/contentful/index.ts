@@ -20,6 +20,8 @@ export * from "@/contentful/graphql";
 export {
   fetchCountries,
   fetchCountryBySlug,
+  getHomepageCountries,
+  type HomepageCountry,
 } from "@/contentful/services/country";
 export {
   fetchHomePageBySlug,
