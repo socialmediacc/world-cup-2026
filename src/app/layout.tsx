@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${montserrat.variable} light h-full antialiased`}
+      className={`${inter.variable} ${montserrat.variable} light h-full scroll-smooth antialiased`}
     >
       <head>
         <link

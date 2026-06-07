@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 
+import { PARTICIPATING_NATIONS_SECTION_ID } from "@/constants/home-sections";
 import type { HomeHero as HomeHeroData } from "@/contentful/utils/map-home";
 
 type HomeHeroProps = {
@@ -19,12 +19,12 @@ export function HomeHero({ hero }: HomeHeroProps) {
             {hero.description}
           </p>
           <div className="mt-stack-sm flex flex-wrap gap-4">
-            <Link
-              href="/countries"
+            <a
+              href={`#${PARTICIPATING_NATIONS_SECTION_ID}`}
               className="rounded-lg border-2 border-primary bg-primary px-8 py-3 font-label-md text-label-md text-on-primary shadow-sm transition-colors duration-200 hover:-translate-y-[2px] hover:bg-primary-container hover:shadow-md"
             >
               Explore Countries
-            </Link>
+            </a>
           </div>
         </div>
         <div className="relative h-full min-h-[400px] md:min-h-full">

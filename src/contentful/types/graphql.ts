@@ -203,6 +203,18 @@ export type CountriesQuery = {
   } | null;
 };
 
+export type HomepageCountryEntry = {
+  name?: string | null;
+  slug?: string | null;
+  flag?: ContentfulAsset | null;
+};
+
+export type HomepageCountriesQuery = {
+  countryProfileCollection?: {
+    items?: Array<HomepageCountryEntry | null> | null;
+  } | null;
+};
+
 export type HomeBySlugQuery = {
   homePageCollection?: {
     items?: Array<HomePageEntry | null> | null;
