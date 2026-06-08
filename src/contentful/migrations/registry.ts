@@ -51,6 +51,10 @@ import {
   down as down013,
   up as up013,
 } from "@/contentful/migrations/definitions/013-create-home-page-content-type";
+import {
+  down as down014,
+  up as up014,
+} from "@/contentful/migrations/definitions/014-post-slug-from-title";
 
 /**
  * Ordered list of Contentful migrations. Add new files under
@@ -146,5 +150,12 @@ export const contentfulMigrations: ContentfulMigration[] = [
     description: "Create Home Page content type (slug, hero, SEO)",
     up: up013,
     down: down013,
+  },
+  {
+    id: "014-post-slug-from-title",
+    description:
+      "Configure Post slug field to auto-generate from title in Contentful",
+    up: up014,
+    down: down014,
   },
 ];
