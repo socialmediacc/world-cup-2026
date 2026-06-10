@@ -41,7 +41,7 @@ export default async function HomePage() {
 
   return (
     <PageContainer>
-      <main className="w-full px-margin-mobile py-stack-lg md:px-margin-desktop">
+      <main className="w-full px-margin-mobile pt-stack-md pb-stack-lg md:px-margin-desktop md:py-stack-lg">
         <HomeHero hero={home.hero} />
         <CommunityHub posts={posts} />
         <ParticipatingNations countries={countries} />

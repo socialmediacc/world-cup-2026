@@ -9,7 +9,7 @@ type HomeHeroProps = {
 
 export function HomeHero({ hero }: HomeHeroProps) {
   return (
-    <section className="relative mb-stack-lg mt-stack-lg overflow-hidden rounded-xl border border-outline/10 bg-surface-container-lowest shadow-[0_10px_40px_-10px_rgba(8,27,58,0.15)]">
+    <section className="relative mb-stack-lg mt-0 overflow-hidden rounded-xl border border-outline/10 bg-surface-container-lowest shadow-[0_10px_40px_-10px_rgba(8,27,58,0.15)] md:mt-stack-lg">
       <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
         <div className="z-10 flex flex-col justify-center bg-surface-container-lowest p-stack-lg">
           <h1 className="mb-stack-sm font-display-lg text-display-lg text-primary">
